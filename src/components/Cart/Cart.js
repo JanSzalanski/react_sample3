@@ -12,16 +12,18 @@ const Cart = (props) => {
   );
 
   return (
-    <Modal>
+    <Modal onShowModal={props.onShowModal}>
       {cartItems}
-      <dvi className={classes.total}>
+      <div className={classes.total}>
         <span>Toala Amount</span>
         <span>35,5</span>
-      </dvi>
-      <dvi className={classes.actions}>
-        <button className={classes["button--alt"]}>close</button>
+      </div>
+      <div className={classes.actions}>
+        <button className={classes["button--alt"]} onClick={props.onShowModal}>
+          close
+        </button>
         <button className={classes.button}>Order</button>
-      </dvi>
+      </div>
     </Modal>
   );
 };
