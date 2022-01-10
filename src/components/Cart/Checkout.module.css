@@ -25,10 +25,11 @@
 .actions {
   display: flex;
   justify-content: flex-end;
-  gap: 1rem;
+  /* gap: 1rem; */
 }
 
 .actions button {
+  margin-right: 1rem;
   font: inherit;
   color: #5a1a01;
   cursor: pointer;
@@ -52,6 +53,14 @@
 .actions .submit:hover,
 .actions .submit:active {
   background-color: #7a2706;
+}
+
+.actions button:hover:disabled,
+.actions button:disabled {
+  background-color: #ccc;
+  border: 1px solid rgb(77, 77, 77);
+  color: rgb(77, 77, 77);
+  cursor: no-drop;
 }
 
 .invalid label {
